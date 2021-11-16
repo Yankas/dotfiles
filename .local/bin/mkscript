@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+
+file=$1
+[ -n "$2" ] && type=$2 || type="${1##*.}"
+
+nl=$'\n'
+tab=$'\t'
+create () {
+	echo "$1" > $file
+	chmod +x $file
+}
+
+case $type in
+	py | python) create "/usr/bin/env python";;
+	rb | ruby) create "#!/usr/bin/env ruby";;
+	sh) create "#!/usr/bin/env sh";;
+	zsh) create "#!/usr/bin/env zsh";;
+	bash) create "#!/usr/bin/env bash";;
+	pwsh, ps1, powershell) create "#!/usr/bin/env pwsh";;
+	lua) create "#!/usr/bin/env lua";;
+	fsi | fsx) create "#!/usr/bin/env dotnet fsi";;
+	pl | pearl) create "#!/usr/bin/env pearl";;
+	tcl, tcsh) create "#!/usr/bin/env tclsh";;
+	json) create "{${nl}}"
+	yml | yaml) create "---";;
+	xml) create "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";;
+	html) 
+		create "<!DOCTYPE html>${nl}<html>${nl}${tab}<head>${nl}${tab}</head>\
+${nl}${tab}<body>${nl}${tab}</body>${nl}${tab}</head>${nl}</html>"
+esac

@@ -13,7 +13,8 @@ alias \
 	rm="rm -vI" \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
-#	yt="youtube-dl --add-metadata -i" \
+	sha="shasum -a 256"
+	yt="youtube-dl --add-metadata -i" \
 #	yta="yt -x -f bestaudio/best" \
 #	ffmpeg="ffmpeg -hide_banner"
 
@@ -31,3 +32,10 @@ alias \
 	e="$EDITOR" \
 	v="$EDITOR" \
 	p="pacman" \
+
+alias \
+	hg="history|grep"
+	now='"date +"%T"'
+	today='date +"%m/%d/%Y"'
+	ipe='curl ipinfo.io/ip'
+
