@@ -34,8 +34,8 @@ alias \
 	p="pacman" \
 
 alias \
-	hg="history|grep"
-	now='"date +"%T"'
-	today='date +"%m/%d/%Y"'
-	ipe='curl ipinfo.io/ip'
+	hg="history|grep" \
+	now='"date +"%T"' \
+	today='date +"%m/%d/%Y"' \
+	ipe='curl ipinfo.io/ip' \
 	git-cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
