@@ -1,8 +1,17 @@
 #!/bin/sh
 
+export PATH=$PATH:$HOME/.local/bin
+
 export EDITOR="nvim"
 export VISUAL="vim"
 export BROWSER="google-chrome-stable"
+export WEATHER="Mitte"
+
+export LESS='-R'
+
+export LANG="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -87,3 +96,5 @@ ex=🎯:\
 *.jar=♨:\
 *.java=♨:\
 "
+
+[ $(hostname) = absm-devel ] && source profile.mdevel

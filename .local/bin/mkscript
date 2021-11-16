@@ -16,12 +16,12 @@ case $type in
 	sh) create "#!/usr/bin/env sh";;
 	zsh) create "#!/usr/bin/env zsh";;
 	bash) create "#!/usr/bin/env bash";;
-	pwsh, ps1, powershell) create "#!/usr/bin/env pwsh";;
+	pwsh | ps1 | powershell) create "#!/usr/bin/env pwsh";;
 	lua) create "#!/usr/bin/env lua";;
 	fsi | fsx) create "#!/usr/bin/env dotnet fsi";;
 	pl | pearl) create "#!/usr/bin/env pearl";;
-	tcl, tcsh) create "#!/usr/bin/env tclsh";;
-	json) create "{${nl}}"
+	tcl | tcsh) create "#!/usr/bin/env tclsh";;
+	json) create "{${nl}}";;
 	yml | yaml) create "---";;
 	xml) create "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";;
 	html) 
