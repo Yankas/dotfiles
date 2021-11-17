@@ -38,6 +38,6 @@ alias \
 	now='"date +"%T"' \
 	today='date +"%m/%d/%Y"' \
 	ipe='curl ipinfo.io/ip' \
-	git-cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+	cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 [ $(hostname) = mbpcts-dock.berlin.abs-rz.de ] && source $XDG_CONFIG_HOME/shell/aliasrc.macos
