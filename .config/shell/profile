@@ -98,4 +98,4 @@ ex=🎯:\
 "
 
 [ $(hostname) = absm-devel ] && source $HOME/.config/shell/profile.mdevel
-[ $(hostname) = mbpcts-dock.berlin.abs-rz.de ] && $XDG_CONFIG_HOME/shell/source profile.macos
+[ $(hostname) = mbpcts-dock.berlin.abs-rz.de ] && source $XDG_CONFIG_HOME/shell/profile.macos
