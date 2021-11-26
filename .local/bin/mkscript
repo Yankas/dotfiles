@@ -11,7 +11,7 @@ create () {
 }
 
 case $type in
-	py | python) create "/usr/bin/env python";;
+	py | python) create "#!/usr/bin/env python";;
 	rb | ruby) create "#!/usr/bin/env ruby";;
 	sh) create "#!/usr/bin/env sh";;
 	zsh) create "#!/usr/bin/env zsh";;

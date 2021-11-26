@@ -97,5 +97,9 @@ ex=🎯:\
 *.java=♨:\
 "
 
+
 [ $(hostname) = absm-devel ] && source $HOME/.config/shell/profile.mdevel
 [ $(hostname) = mbpcts-dock.berlin.abs-rz.de ] && source $XDG_CONFIG_HOME/shell/profile.macos
+
+source $HOME/.opam/opam-init/init.sh
+[[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx --vt1

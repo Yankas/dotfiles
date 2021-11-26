@@ -10,6 +10,9 @@ PROMPT='%F{blue}%1~%f %# '
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc"
 
-source $HOME/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[[ ! -r /home/yankas/.opam/opam-init/init.zsh ]] || source /home/yankas/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
 [ $(hostname) = absm-devel ] && source $XDG_CONFIG_HOME/zsh/zshrc.mdevel 
 [ $(hostname) = mbpcts-dock.berlin.abs-rz.de ] && source $XDG_CONFIG_HOME/zsh/zshrc.macos
