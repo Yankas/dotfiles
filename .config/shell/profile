@@ -10,13 +10,15 @@ export WEATHER="Mitte"
 export LESS='-R'
 
 export LANG="en_US.UTF-8"
-export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+export LIBVIRT_DFEAULT_URI="qemu://system"
+
 
 # List of lf icons:
 export LF_ICONS="di=📁:\
@@ -81,8 +83,11 @@ ex=🎯:\
 *.v64=🎮:\
 *.n64=🎮:\
 *.gba=🎮:\
+*.nds=🎮:\
 *.nes=🎮:\
 *.gdi=🎮:\
+*.nsp=🎮:\
+*.xci=🎮:\
 *.1=ℹ:\
 *.nfo=ℹ:\
 *.info=ℹ:\
@@ -95,6 +100,19 @@ ex=🎯:\
 *.torrent=🔽:\
 *.jar=♨:\
 *.java=♨:\
+*.exe=🪟:\
+*.ml=🐫:\
+*.php=🐘:\
+*.pl=⛔:\
+*.c=🇨:\
+*.h=🇭:\
+*.sh=⚙️:\
+*.zsh=⚙️:\
+*profile=⚙️:\
+*xprofile=⚙️:\
+*.zshrc=⚙️:\
+*aliasrc=⚙️:\
+*.xinitrc=⚙️:\
 "
 
 
