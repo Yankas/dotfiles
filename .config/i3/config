@@ -19,6 +19,9 @@ font pango:monospace 8
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+# Set Keyboard Layout
+exec "setxkbmap -model pc104 -layout us -variant intl"
+
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -93,8 +96,8 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -187,7 +190,8 @@ for_window [instance="popup-term"] floating enable
 for_window [instance="popup-term"] resize set 900 800
 for_window [instance="popup-term"] move scratchpad
 for_window [instance="popup-term"] border pixel 5
-bindsym $mod+x exec --no-startup-id kitty --name popup-term
+#bindsym $mod+x 
+exec --no-startup-id kitty --name popup-term
 bindsym $mod+u [instance="popup-term"] scratchpad show; [instance="popup-term"] move position center
 
 ###############################
@@ -197,9 +201,13 @@ for_window [instance="popup-calc"] floating enable
 for_window [instance="popup-calc"] resize set 900 800
 for_window [instance="popup-calc"] move scratchpad
 for_window [instance="popup-calc"] border pixel 5
-bindsym $mod+Shift+p exec --no-startup-id kitty --name popup-calc insect
+#bindsym $mod+Shift+p 
+exec --no-startup-id kitty --name popup-calc insect
 bindsym $mod+r [instance="popup-calc"] scratchpad show; [instance="popup-calc"] move position center
 
+
+#### Disable Title Bars
+new_window 1pixel
 
 #############################################################################
 # Status Bar
