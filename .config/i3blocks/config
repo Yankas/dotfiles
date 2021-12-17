@@ -1,13 +1,23 @@
-[SOUND]
-full_text=Click Me!
-command=echo "Hi"
 
 [WEATHER]
-command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
-interval=3600
+#command=curl -Ss "https://wttr.in/mitte?u&format=%c%t\n"
+command=$HOME/.local/bin/i3sb weather
+interval=20
 color=#A4C2F4
+
+
 
 [TIME]
 command=date +%T
-interval=5R
+interval=1
+color=#A4C2F4
+
+[DATE]
+command=date +%D
+interval=60
+color=#A4C2F4
+
+[VOLUME]
+command=$HOME/.local/bin/i3sb volume
+interval=3
 color=#A4C2F4

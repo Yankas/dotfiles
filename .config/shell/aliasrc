@@ -39,5 +39,5 @@ alias \
 	today='date +"%m/%d/%Y"' \
 	ipe='curl ipinfo.io/ip' \
 	cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
+	standby='systemctl suspend'
 [ $(hostname) = mbpcts-dock.berlin.abs-rz.de ] && source $XDG_CONFIG_HOME/shell/aliasrc.macos

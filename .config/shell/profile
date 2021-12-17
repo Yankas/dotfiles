@@ -1,6 +1,5 @@
 #!/bin/sh
-
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/status
 
 export EDITOR="nvim"
 export VISUAL="vim"
@@ -20,7 +19,7 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export LIBVIRT_DFEAULT_URI="qemu://system"
 
 
-# List of lf icons:
+
 export LF_ICONS="di=📁:\
 fi=📃:\
 tw=🤝:\
@@ -113,8 +112,19 @@ ex=🎯:\
 *.zshrc=⚙️:\
 *aliasrc=⚙️:\
 *.xinitrc=⚙️:\
+*.ml=🐫:\
+*.php=🐘:\
+*.pl=⛔:\
+*.c=🇨:\
+*.h=🇭:\
+*.sh=⚙️:\
+*.zsh=⚙️:\
+*profile=⚙️:\
+*xprofile=⚙️:\
+*.zshrc=⚙️:\
+*aliasrc=⚙️:\
+*.xinitrc=⚙️:\
 "
-
 
 [ $(hostname) = absm-devel ] && source $HOME/.config/shell/profile.mdevel
 [ $(hostname) = mbpcts-dock.berlin.abs-rz.de ] && source $XDG_CONFIG_HOME/shell/profile.macos

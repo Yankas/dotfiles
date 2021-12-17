@@ -3,6 +3,7 @@ SAVEHIST=10000000
 HISTFILE=~/.cache/zsh/history
 
 setopt appendhistory autocd beep extendedglob null_glob glob_subst
+unsetopt glob_subst
 bindkey -e
 PROMPT='%F{blue}%1~%f %# '
 
