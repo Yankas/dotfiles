@@ -1,23 +1,31 @@
 
+[USD]
+command=$HOME/.local/bin/i3sb usd
+interval=3600
+color=#A4C2F4
+
 [WEATHER]
 #command=curl -Ss "https://wttr.in/mitte?u&format=%c%t\n"
 command=$HOME/.local/bin/i3sb weather
-interval=20
+interval=600
 color=#A4C2F4
 
-
-
 [TIME]
-command=date +%T
+command=$HOME/.local/bin/i3sb time
 interval=1
 color=#A4C2F4
 
 [DATE]
-command=date +%D
+command=$HOME/.local/bin/i3sb date
 interval=60
 color=#A4C2F4
 
 [VOLUME]
 command=$HOME/.local/bin/i3sb volume
+interval=3
+color=#A4C2F4
+
+[UPDATES]
+command=$HOME/.local/bin/i3sb updates
 interval=3
 color=#A4C2F4
