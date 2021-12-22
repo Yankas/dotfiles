@@ -20,7 +20,7 @@ alias \
 
 # Colorize commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
+	ls="ls -AhN --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
@@ -41,3 +41,14 @@ alias \
 	cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 	standby='systemctl suspend'
 [ $(hostname) = mbpcts-dock.berlin.abs-rz.de ] && source $XDG_CONFIG_HOME/shell/aliasrc.macos
+
+
+alias \
+	cfgi3="$EDITOR ~/.config/i3/config" \
+	cfgxprofile="$EDITOR ~/.config/x11/profile" \
+	cfgprofile="$EDITOR ~/.config/shell/profile" \
+	cfgalias="$EDITOR ~/.config/shell/aliasrc" \
+	cfgvim="$EDITOR ~/.config/nvim/init.vim" \
+	cfgkitty="$EDITOR ~/.config/kitty/kitty.conf" \
+	cfgpicom="$EDITOR ~/.config/picom/picom.conf" \
+	cfgi3blocks="$EDITOR ~/.config/i3blocks/config" 

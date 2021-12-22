@@ -14,16 +14,22 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-# font for window titles only.
-font pango:monospace 8 
+# font for window titles only
+font pango:monospace 16 
 # wodifier for dragging windows
 floating_modifier $mod
-
+# pretty
+for_window [class=".*"] border pixel 3
+#gaps outer 10
+gaps inner 10
+gaps outer -5
 ##################################################
 ################### Autostart ####################
 ##################################################
 # Load XDG/Desktop Autostarts
 exec --no-startup-id dex --autostart --environment i3 
+exec --no-startup-id picom -b
+exec --no-startup-id redshift -l 52:13
 exec --no-startup-id kitty --name popup-term
 exec --no-startup-id kitty --name popup-calc insect
 # Lock screen before suspend
@@ -44,7 +50,7 @@ workspace $ws2 output $screen_right
 workspace $ws4 output $screen_right
 workspace $ws6 output $screen_right
 workspace $ws8 output $screen_right
-workspace $ws0 output $screen_right
+workspace $ws10 output $screen_right
 # disable title bars 
 new_window 1pixel 
 for_window [instance="pavucontrol"] floating enable
@@ -52,7 +58,7 @@ for_window [instance="pavucontrol"] resize set 1000 800
 for_window [instance="pavucontrol"] move position center
 # Terminal Pop-Up used by status bar
 for_window [instance="popup-status"] floating enable
-for_window [instance="popup-status"] resize set 1150 800
+for_window [instance="popup-status"] resize set 1650 1200
 for_window [instance="popup-status"] border pixel 5
 for_window [instance="popup-status"] move position center
 # Scratchpad Terminal
@@ -68,6 +74,7 @@ for_window [instance="popup-calc"] border pixel 5
 # Teamspeak
 for_window [class="TeamSpeak 3"] move to workspace $ws9
 for_window [class="Steam"] move to workspace $ws10
+for_window [instance="origin.exe"] floating enable
 ##################################################
 ################## Keybindings ###################
 ##################################################
@@ -145,8 +152,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 ##################################################
 bar {
         position top
-        status_command i3blocks
-        font pango:monospace 10
+		tray_output primay
+		status_command i3blocks
+        font pango:Consolas 14
         separator_symbol "⧸"
 }
 

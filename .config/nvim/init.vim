@@ -1,5 +1,6 @@
 " Enable file tpye specifc handling
 filetype plugin indent on
+filetype plugin on
 
 " Generic settings
 set syntax=enable
@@ -15,6 +16,21 @@ set shell=$SHELL
 set background=light
 set showcmd
 set wildmenu
+
+" Search down into subfolders
+" Provides tab-completion for all file related paths
+set path+=**
+
+" File browser
+let g:netrw_banner=0 " disable annoying banner
+let g:netrw_browse_split=4 " open in prior window
+let g:netrw_altv=1 			" open splits to the right
+let g:netrw_liststyle=3		" tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^|\s\s\)\zs\.\S\+'
+" Use :edit [FOLDER] to open a file browser
+" <CR>/v/t to open in an h-split/v-split/tab
+" check |netwr-browse-maps| for more mappings
 
 " indentation settings
 set smartindent
@@ -48,6 +64,8 @@ highlight ColorColumn ctermbg=0
 " highlight characters that go past the 131 character limit
 call matchadd('ColorColumn', '\%131v', 100)
 
+" Create the `tags` file (may need to install ctags first)
+comman! MakeTags !ctags -R .
 
 " Use default X11 clipboard instead of default
 set clipboard=unnamedplus
@@ -61,3 +79,9 @@ au BufNewFile,BufRead *.yml,*yaml
 	\ set expandtab
 	\ set shiftwidth=2
 	\ set tabstop=2
+
+
+"#########################################
+"################ SNIPPITS ###############
+"#########################################
+nnoremap ,html :-1read $XDG_CONFIG_HOME/nvim/skeleton.html<CR>3jwf>a
