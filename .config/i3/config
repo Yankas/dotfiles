@@ -27,7 +27,6 @@ gaps outer -5
 ################### Autostart ####################
 ##################################################
 # Load XDG/Desktop Autostarts
-exec --no-startup-id dex --autostart --environment i3 
 exec --no-startup-id picom -b
 exec --no-startup-id redshift -l 52:13
 exec --no-startup-id kitty --name popup-term
@@ -35,8 +34,8 @@ exec --no-startup-id kitty --name popup-calc insect
 # Lock screen before suspend
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork 
 # Set keyboard layout
-exec "setxkbmap -model pc104 -layout us -variant altgr-intl" 
-exec --no-startup-id nm-applet
+exec "setxkbmap -model pc104 -layout us -variant altgr-intl" exec --no-startup-id nm-applet
+exec --no-startup-id dex --autostart --environment i3 
 #date +"%d %b %Y %T %Z" -s "$(wget -qSO- --max-redirect=0 http://google.com 2>&1 | grep '^  Date:' | cut -d' ' -f 5-)"
 ##################################################
 ################# Window Rules ###################

@@ -10,6 +10,8 @@ export HISTCONTROL=ignoreboth # no duplicates in history
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 
+export MINECRAFT="/home/yankas/.local/share/gdlauncher_next/instances/"
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
