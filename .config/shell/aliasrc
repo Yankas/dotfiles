@@ -40,11 +40,9 @@ alias \
 	ipe='curl ipinfo.io/ip' \
 	cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 	standby='systemctl suspend'
+
 alias \
 	loopback-line-in="pw-loopback -C alsa_input.pci-0000_0d_00.4.analog-stereo"
-
-[ $(hostname) = mbpcts-dock.berlin.abs-rz.de ] && source $XDG_CONFIG_HOME/shell/aliasrc.macos
-
 
 alias \
 	cfgi3="$EDITOR ~/.config/i3/config" \
@@ -55,3 +53,6 @@ alias \
 	cfgkitty="$EDITOR ~/.config/kitty/kitty.conf" \
 	cfgpicom="$EDITOR ~/.config/picom/picom.conf" \
 	cfgi3blocks="$EDITOR ~/.config/i3blocks/config" 
+
+
+[ -e "$XDG_CONFIG_HOME/shell/aliasrc.local" ] && source "$XDG_CONFIG_HOME/shell/aliasrc.local"
