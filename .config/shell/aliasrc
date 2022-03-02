@@ -13,7 +13,7 @@ alias \
 	rm="rm -vI" \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
-	sha="shasum -a 256"
+	sha="shasum -a 256" \
 	yt="youtube-dl --add-metadata -i" \
 #	yta="yt -x -f bestaudio/best" \
 #	ffmpeg="ffmpeg -hide_banner"
@@ -31,24 +31,25 @@ alias \
 	sdn="shutdown -h now" \
 	e="$EDITOR" \
 	v="$EDITOR" \
-	p="pacman" \
+	p="pacman" 
 
 alias \
 	hg="history|grep" \
 	now='"date +"%T"' \
 	today='date +"%m/%d/%Y"' \
 	ipe='curl ipinfo.io/ip' \
-	cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+	cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' \
 	standby='systemctl suspend'
 
 alias \
-	loopback-line-in="pw-loopback -C alsa_input.pci-0000_0d_00.4.analog-stereo"
+	loopback="pw-loopback -C alsa_input.pci-0000_0d_00.4.analog-stereo"
 
 alias \
 	cfgi3="$EDITOR ~/.config/i3/config" \
 	cfgxprofile="$EDITOR ~/.config/x11/profile" \
-	cfgprofile="$EDITOR ~/.config/shell/profile" \
-	cfgalias="$EDITOR ~/.config/shell/aliasrc" \
+	cfgprofile="$EDITOR ~/.config/shell/profile && source ~/.config/shell/profile" \
+	cfgalias="$EDITOR ~/.config/shell/aliasrc && source ~/.config/shell/aliasrc" \
+	cfgzsh="$EDITOR ~/.config/zsh/.zshrc && source ~/.config/zsh/.zshrc" \
 	cfgvim="$EDITOR ~/.config/nvim/init.vim" \
 	cfgkitty="$EDITOR ~/.config/kitty/kitty.conf" \
 	cfgpicom="$EDITOR ~/.config/picom/picom.conf" \
