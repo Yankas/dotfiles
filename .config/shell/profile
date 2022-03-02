@@ -139,7 +139,7 @@ ex=🎯:\
 "
 
 
-source $HOME/.opam/opam-init/init.sh 
+[ -e $HOME/.opam/opam-init/init.sh ] && source $HOME/.opam/opam-init/init.sh 
 [[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx --vt1
 
 
