@@ -53,7 +53,7 @@ alias \
 	cfgvim="$EDITOR ~/.config/nvim/init.vim" \
 	cfgkitty="$EDITOR ~/.config/kitty/kitty.conf" \
 	cfgpicom="$EDITOR ~/.config/picom/picom.conf" \
-	cfgi3blocks="$EDITOR ~/.config/i3blocks/config" 
-
+	cfgi3blocks="$EDITOR ~/.config/i3blocks/config" \
+	cfglf="$EDITOR ~/.config/lf/lfrc" \
 
 [ -e "$XDG_CONFIG_HOME/shell/aliasrc.local" ] && source "$XDG_CONFIG_HOME/shell/aliasrc.local"

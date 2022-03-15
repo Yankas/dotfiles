@@ -80,7 +80,8 @@ for_window [instance="origin.exe"] floating enable
 # Apps
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+s exec deepin-screenshot
-bindsym $mod+d exec --no-startup-id dmenu_run 
+#bindsym $mod+d exec --no-startup-id dmenu_run 
+bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+u [instance="popup-term"] scratchpad show; [instance="popup-term"] move position center
 bindsym $mod+r [instance="popup-calc"] scratchpad show; [instance="popup-calc"] move position center
 
@@ -115,7 +116,7 @@ bindsym $mod+s layout default
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 # switch to workspace
