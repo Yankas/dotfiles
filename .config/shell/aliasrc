@@ -15,6 +15,7 @@ alias \
 	mkd="mkdir -pv" \
 	sha="shasum -a 256" \
 	yt="youtube-dl --add-metadata -i" \
+	ex="atool -x" \
 #	yta="yt -x -f bestaudio/best" \
 #	ffmpeg="ffmpeg -hide_banner"
 

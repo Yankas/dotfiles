@@ -10,7 +10,10 @@ export HISTCONTROL=ignoreboth # no duplicates in history
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 
+
+# Gaming specific paths
 export MINECRAFT="/home/yankas/.local/share/gdlauncher_next/instances/"
+export TS4_MODS="/home/yankas/.local/share/wine/Electronic Arts/The Sims 4/Mods"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -19,8 +22,6 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export GCM_CREDENTIAL_STORE=gpg
 export GTK2_RC_FILES=~/.config/gtk-2.0/gtkrc-2.0
 export SSH_TTY=$(tty)
-
-export TS4_MODS="/home/yankas/.local/share/wine/Electronic Arts/The Sims 4/Mods"
 
 export LIBVIRT_DFEAULT_URI="qemu://system"
 
