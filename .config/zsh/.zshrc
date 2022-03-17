@@ -1,6 +1,7 @@
 HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/.cache/zsh/history
+fpath+=("$ZDOTDIR/completions")
 
 # oh-my-zsh configuration
 export ZSH="${XDG_CONFIG_HOME}/oh-my-zsh"
@@ -118,3 +119,5 @@ ZSH_HIGHLIGHT_STYLES[cursor]='standout'
 
 [ -e /home/yankas/.opam/opam-init/init.zsh ] && source /home/yankas/.opam/opam-init/init.zsh > /dev/null 
 [ -e "$XDG_CONFIG_HOME/zsh/.zshrc.local" ] && source "$XDG_CONFIG_HOME/zsh/.zshrc.local"
+
+: # do nothing to reset exit code to zero in case the last command fails (no zshrc.local exists)
