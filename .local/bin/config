@@ -1,0 +1,59 @@
+#!/usr/bin/env python
+from doctest import DocTestFailure
+import sys,os
+cdir = "$XDG_CONFIG_HOME"
+
+OPEN_ONLY = [ 
+    ("i3", "i3/config"),
+    ("xprofile", "x11/profile"), 
+    ("vim", "nvim/init.vim"),
+    ("kitty", "kitty/kitty.conf"),
+    ("picom", "picom/picom.conf"),
+    ("i3blocks", "i3blocks/config"),
+    ("lf", "lfrc")
+]
+OPEN_AND_SOURCE = [
+    ("profile", "shell/xprofile"),
+    ("aliasrc", "shell/aliasrc"),
+    ("zsh", "zsh/.zshrc")
+]
+
+
+class Config:
+    def __init__(self, dotfile, command):
+        self.df = dotfile
+        self.cmd = command
+    
+    def run(self):
+        print (self.df)
+        print (self.cmd)
+        full_cmd = "f=" + self.df + "; " + self.cmd
+        os.system(full_cmd)
+
+def cmd_open(file):
+    return Config(file, '$EDITOR $f')
+def cmd_open_and_source(file):
+    return Config(file, '$EDITOR $f && source $f')
+
+configs = {}
+
+# Files that should be opened
+for name, dotfile in OPEN_ONLY:
+    configs[name] = cmd_open(cdir + "/" +dotfile)
+# Files that should be open and sourced
+for name, dotfile in OPEN_AND_SOURCE:
+    configs[name] = cmd_open_and_source(cdir + "/" +dotfile)
+
+
+def list():
+    for key in configs:
+        print(key)
+
+def main():
+    if sys.argv[1] == "list":
+        list()
+    else:
+        configs[sys.argv[1]].run()
+
+if __name__ == "__main__":
+    main()
