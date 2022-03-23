@@ -9,7 +9,7 @@ export ZSH="${XDG_CONFIG_HOME}/oh-my-zsh"
 ZSH_THEME="agnoster"
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/vscode/vscode.plugin.zsh
-plugins=(git vscode)
+plugins=(git)
 
 
 setopt appendhistory autocd beep extendedglob null_glob glob_subst

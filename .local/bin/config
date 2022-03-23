@@ -1,59 +1,34 @@
-#!/usr/bin/env python
-from doctest import DocTestFailure
-import sys,os
-cdir = "$XDG_CONFIG_HOME"
+#!/usr/bin/env zsh
+# 
+p=$XDG_CONFIG_HOME
+if [ $1 = "list" ] 
+then
+    echo "Dotfiles:"
+    while IFS="," read -r rec_column1 rec_column2 rec_column3
+    do
+        [ -e $(eval echo $rec_column2) ] && echo "$rec_column1"
+    done < $XDG_CONFIG_HOME/configrc
+else
+    while IFS="," read -r rec_column1 rec_column2 rec_column3
+    do
+        if [ $rec_column1 = $1 ]
+        then
+            f=$(eval echo $rec_column2)
+            tmp_cmd=$rec_column3
+        fi
+    done < $XDG_CONFIG_HOME/configrc
 
-OPEN_ONLY = [ 
-    ("i3", "i3/config"),
-    ("xprofile", "x11/profile"), 
-    ("vim", "nvim/init.vim"),
-    ("kitty", "kitty/kitty.conf"),
-    ("picom", "picom/picom.conf"),
-    ("i3blocks", "i3blocks/config"),
-    ("lf", "lfrc")
-]
-OPEN_AND_SOURCE = [
-    ("profile", "shell/xprofile"),
-    ("aliasrc", "shell/aliasrc"),
-    ("zsh", "zsh/.zshrc")
-]
-
-
-class Config:
-    def __init__(self, dotfile, command):
-        self.df = dotfile
-        self.cmd = command
-    
-    def run(self):
-        print (self.df)
-        print (self.cmd)
-        full_cmd = "f=" + self.df + "; " + self.cmd
-        os.system(full_cmd)
-
-def cmd_open(file):
-    return Config(file, '$EDITOR $f')
-def cmd_open_and_source(file):
-    return Config(file, '$EDITOR $f && source $f')
-
-configs = {}
-
-# Files that should be opened
-for name, dotfile in OPEN_ONLY:
-    configs[name] = cmd_open(cdir + "/" +dotfile)
-# Files that should be open and sourced
-for name, dotfile in OPEN_AND_SOURCE:
-    configs[name] = cmd_open_and_source(cdir + "/" +dotfile)
-
-
-def list():
-    for key in configs:
-        print(key)
-
-def main():
-    if sys.argv[1] == "list":
-        list()
-    else:
-        configs[sys.argv[1]].run()
-
-if __name__ == "__main__":
-    main()
+    case $tmp_cmd in
+        edit)
+            $EDITOR $f
+            ;;
+        edit_source)
+            $EDITOR $f && source $f  
+            ;;
+        *)
+            $rec_column3
+            ;;
+    esac
+    unset f tmp_cmd
+fi
+unset p
