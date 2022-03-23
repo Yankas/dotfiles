@@ -1,3 +1,6 @@
 [submodule ".config/oh-my-zsh/custom/plugins/vscode"]
 	path = .config/oh-my-zsh/custom/plugins/vscode
 	url = https://github.com/valentinocossar/vscode.git
+[submodule ".config/oh-my-zsh"]
+	path = .config/oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
