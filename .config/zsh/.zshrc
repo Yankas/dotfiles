@@ -7,7 +7,7 @@ fpath+=("$ZDOTDIR/completions")
 export ZSH="${XDG_CONFIG_HOME}/oh-my-zsh"
 #ZSH_THEME="jonathan"
 ZSH_THEME="agnoster"
-plugins=(git vscode)
+plugins=(git vscode zsh-interactive-cd)
 source $ZSH/oh-my-zsh.sh
 
 
