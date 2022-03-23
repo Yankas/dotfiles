@@ -1,0 +1,3 @@
+[submodule "vscode"]
+	path = vscode
+	url = /Users/cts/.config/oh-my-zsh/custom/plugins/vscode/
