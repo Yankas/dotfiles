@@ -9,5 +9,5 @@ picom,$p/picom/picom.conf,edit
 alias,$p/shell/aliasrc,edit_source
 kitty,$p/kitty/kitty.conf,edit
 i3,$p/i3/config,edit
-sds,$HOME/sds_desc,edit
+sds,$HOME/sds2_desc,edit
 fstab,/etc/fstab,edit
