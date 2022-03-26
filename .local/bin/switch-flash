@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+/home/yankas/.local/share/fusee-launcher/fusee-launcher.py /home/yankas/.config/fusee-launcher/fusee-primary.bin

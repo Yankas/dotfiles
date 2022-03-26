@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=/opt/teamspeak3/ts3client_runscript.sh
+Name=teamspeak3
+Terminal=false
+Type=Application
