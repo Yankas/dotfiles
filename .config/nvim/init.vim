@@ -80,6 +80,8 @@ au BufNewFile,BufRead *.yml,*yaml
 	\ set shiftwidth=2
 	\ set tabstop=2
 
+" ocaml support
+set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
 
 "#########################################
 "################ SNIPPITS ###############

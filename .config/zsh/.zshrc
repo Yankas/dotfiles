@@ -116,7 +116,7 @@ ZSH_HIGHLIGHT_STYLES[cursor]='standout'
 [ -e /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] \
 	&& source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 
-[ -e /home/yankas/.opam/opam-init/init.zsh ] && source /home/yankas/.opam/opam-init/init.zsh > /dev/null 
+[ -e $HOME/.opam/opam-init/init.zsh ] && source $HOME/.opam/opam-init/init.zsh > /dev/null 
 [ -e "$XDG_CONFIG_HOME/zsh/.zshrc.local" ] && source "$XDG_CONFIG_HOME/zsh/.zshrc.local"
 
 : # do nothing to reset exit code to zero in case the last command fails (no zshrc.local exists)

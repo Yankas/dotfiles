@@ -7,3 +7,6 @@
 [submodule ".local/share/fusee-launcher"]
 	path = .local/share/fusee-launcher
 	url = https://github.com/Qyriad/fusee-launcher.git
+[submodule ".local/.config/zsh/zsh-syntax-highlighting"]
+	path = .local/.config/zsh/zsh-syntax-highlighting
+	path = https://github.com/zsh-users/zsh-syntax-highlighting.git

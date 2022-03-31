@@ -4,10 +4,11 @@ config,$p/configrc,edit
 profile,$p/shell/profile,edit_source
 zsh,$p/zsh/.zshrc,edit_source
 i3blocks,$p/i3blocks/config,edit
-lf,$p/lf/lfrc/edit
+lf,$p/lf/lfrc,edit
 picom,$p/picom/picom.conf,edit
 alias,$p/shell/aliasrc,edit_source
 kitty,$p/kitty/kitty.conf,edit
 i3,$p/i3/config,edit
 sds,$HOME/sds2_desc,edit
-fstab,/etc/fstab,edit
+fstab,/etc/fstab,sudo $EDITOR $f
+skhd,~/.config/skhd/skhdrc,edit
