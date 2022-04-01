@@ -21,7 +21,7 @@ alias \
 
 # Colorize commands when possible.
 alias \
-	ls="ls -AhN --color=auto --group-directories-first" \
+	ls="ls -AhN --color=auto --group-directories-first --hyperlink" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
@@ -44,17 +44,5 @@ alias \
 
 alias \
 	loopback="pw-loopback -C alsa_input.pci-0000_0d_00.4.analog-stereo"
-
-alias \
-	cfgi3="$EDITOR ~/.config/i3/config" \
-	cfgxprofile="$EDITOR ~/.config/x11/profile" \
-	cfgprofile="$EDITOR ~/.config/shell/profile && source ~/.config/shell/profile" \
-	cfgalias="$EDITOR ~/.config/shell/aliasrc && source ~/.config/shell/aliasrc" \
-	cfgzsh="$EDITOR ~/.config/zsh/.zshrc && source ~/.config/zsh/.zshrc" \
-	cfgvim="$EDITOR ~/.config/nvim/init.vim" \
-	cfgkitty="$EDITOR ~/.config/kitty/kitty.conf" \
-	cfgpicom="$EDITOR ~/.config/picom/picom.conf" \
-	cfgi3blocks="$EDITOR ~/.config/i3blocks/config" \
-	cfglf="$EDITOR ~/.config/lf/lfrc" \
 
 [ -e "$XDG_CONFIG_HOME/shell/aliasrc.local" ] && source "$XDG_CONFIG_HOME/shell/aliasrc.local"

@@ -113,10 +113,11 @@ ZSH_HIGHLIGHT_STYLES[redirection]='fg=#F8F8F2'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=#F8F8F2'
 ZSH_HIGHLIGHT_STYLES[default]='fg=#F8F8F2'
 ZSH_HIGHLIGHT_STYLES[cursor]='standout'
-[ -e /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] \
-	&& source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 
+[ -e $XDG_CONFIG_HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] \
+	&& source $XDG_CONFIG_HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 [ -e $HOME/.opam/opam-init/init.zsh ] && source $HOME/.opam/opam-init/init.zsh > /dev/null 
 [ -e "$XDG_CONFIG_HOME/zsh/.zshrc.local" ] && source "$XDG_CONFIG_HOME/zsh/.zshrc.local"
 
-: # do nothing to reset exit code to zero in case the last command fails (no zshrc.local exists)
+
+: # make sure exit code is zero, even if previous command failed. 
