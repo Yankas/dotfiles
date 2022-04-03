@@ -36,7 +36,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # Set keyboard layout
 exec "setxkbmap -model pc104 -layout us -variant altgr-intl" exec --no-startup-id nm-applet
 exec --no-startup-id dex --autostart --environment i3 
-exec --no-startup-id fix-ts3
+exec --no-startup-id "sleep 4 fix-ts3"
 ##################################################
 ################# Window Rules ###################
 ##################################################
@@ -163,7 +163,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 ##################################################
 bar {
         position top
-		tray_output primay
+		tray_output Primary
 		status_command i3blocks
         font pango:Consolas 14
         separator_symbol "⧸"
