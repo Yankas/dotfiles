@@ -35,7 +35,7 @@ def main():
         case weight if re.match(r"\d+\.*d*|.\d+", weight):
             file = open(weight_file, 'a')
             date = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
-            file.write(f'\n{date}|{weight}')
+            file.write(f'{date}|{weight}\n')
         case _:
             print("Invalid parameter")
             
