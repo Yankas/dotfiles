@@ -94,3 +94,4 @@ call plug#end()
 "################ SNIPPITS ###############
 "#########################################
 nnoremap ,html :-1read $XDG_CONFIG_HOME/nvim/skeleton.html<CR>3jwf>a
+nnoremap ,abscase :-1read $XDG_CONFIG_HOME/snippits/abs-test-case.rb<CR>
