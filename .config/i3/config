@@ -26,15 +26,17 @@ gaps outer -5
 ##################################################
 ################### Autostart ####################
 ##################################################
-# Load XDG/Desktop Autostarts
 exec --no-startup-id picom -b
 exec --no-startup-id redshift -l 52:13
+exec --no-startup-id dunst
+
 exec --no-startup-id kitty --name popup-term
 exec --no-startup-id kitty --name popup-calc insect
 # Lock screen before suspend
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork 
 # Set keyboard layout
 exec_always "setxkbmap -model pc104 -layout us -variant altgr-intl" exec --no-startup-id nm-applet
+# Load XDG/Desktop Autostarts
 exec --no-startup-id dex --autostart --environment i3 
 exec --no-startup-id "sleep 4; fix-ts3"
 ##################################################
