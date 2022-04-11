@@ -2,18 +2,25 @@ xprofile,$p/x11/profile,edit
 vim,$p/nvim/init.vim,edit
 config,$p/configrc,edit
 profile,$p/shell/profile,edit_source
-profile-local,$p/shell/profile.local
 zsh,$p/zsh/.zshrc,edit_source
 zsh-local,$p/zsh/.zshrc.local,edit
 i3blocks,$p/i3blocks/config,edit
 lf,$p/lf/lfrc,edit
+lf-marks,~/.local/share/lf/marks,edit
+dunst,$p/dunst/dunstrc,edit
 picom,$p/picom/picom.conf,edit
 alias,$p/shell/aliasrc,edit_source
-alias-local,$p/shell/aliasrc.local,edit
 kitty,$p/kitty/kitty.conf,edit
 kitty-open,$p/kitty/open-actions.conf,edit
 i3,$p/i3/config,edit
-sds,$HOME/sds2_desc,edit
-fstab,/etc/fstab,sudo $EDITOR $f
 autostart,$p/autostart,lf $f
-skhd,~/.config/skhd/skhdrc,edit
+ssh,~/.ssh/config
+fstab,/etc/fstab,sudo $EDITOR $f
+hosts,/etc/hosts,sudo $EDITOR $f
+hostname,/etc/hostname,sudo $EDITOR $f
+alias-local,$p/shell/aliasrc.local,edit
+profile-local,$p/shell/profile.local
+sds,$HOME/sds2_desc,edit
+skhd,$p/skhd/skhdrc,edit
+yabai,$p/yabai/yabairc,edit
+spacebar,$p/spacebar/spacebarrc,$EDITOR $f && brew services stop spacebar && brew services start spacebar
