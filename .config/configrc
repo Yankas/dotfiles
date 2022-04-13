@@ -19,7 +19,7 @@ fstab,/etc/fstab,sudo $EDITOR $f
 hosts,/etc/hosts,sudo $EDITOR $f
 hostname,/etc/hostname,sudo $EDITOR $f
 alias-local,$p/shell/aliasrc.local,edit
-profile-local,$p/shell/profile.local
+profile-local,$p/shell/profile.local,edit
 sds,$HOME/sds2_desc,edit
 skhd,$p/skhd/skhdrc,edit
 yabai,$p/yabai/yabairc,edit
