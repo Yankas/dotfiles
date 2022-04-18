@@ -30,6 +30,7 @@ exec --no-startup-id picom -b
 exec --no-startup-id redshift -l 52:13
 exec --no-startup-id dunst
 
+exec --no-startup-id kitty --name popup-cale calcurse
 exec --no-startup-id kitty --name popup-term
 exec --no-startup-id kitty --name popup-calc insect
 # Lock screen before suspend
@@ -72,6 +73,11 @@ for_window [instance="popup-calc"] floating enable
 for_window [instance="popup-calc"] resize set 900 800
 for_window [instance="popup-calc"] move scratchpad
 for_window [instance="popup-calc"] border pixel 5
+# Scratchpad Calendar
+for_window [instance="popup-cale"] floating enable
+for_window [instance="popup-cale"] resize set 900 800
+for_window [instance="popup-cale"] move scratchpad
+for_window [instance="popup-cale"] border pixel 5
 # Scratchpad Teamspeak
 for_window [title="TeamSpeak 3"] move scratchpad
 for_window [class="TeamSpeak 3"] move resize set 900 800
@@ -101,7 +107,8 @@ bindsym $mod+Shift+s exec deepin-screenshot
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+u [instance="popup-term"] scratchpad show; [instance="popup-term"] move position center
-bindsym $mod+c [instance="popup-calc"] scratchpad show; [instance="popup-calc"] move position center
+bindsym $mod+shift+C [instance="popup-calc"] scratchpad show; [instance="popup-calc"] move position center
+bindsym $mod+c [instance="popup-cale"] scratchpad show; [instance="popup-cale"] move position center
 bindsym $mod+t [class="TeamSpeak 3"] scratchpad show; [class="TeamSpeak 3"] move position center
 bindsym $mod+shift+t [class="discord"] scratchpad show; [class="discord"] move position center
 bindsym $mod+b [instance="qbittorrent"] scratchpad show; [instance="qbittorrent"] move position center
@@ -162,7 +169,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 # reload i3 config
-bindsym $mod+Shift+c reload 
+bindsym $mod+ctrl+c reload 
 # restart i3
 bindsym $mod+Shift+r restart 
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"

@@ -1,2 +1,10 @@
 #!/usr/bin/env sh
-/home/yankas/.local/share/fusee-launcher/fusee-launcher.py /home/yankas/.config/fusee-launcher/fusee-primary.bin
+if [ ! -f "/etc/udev/rules.d/10-switch.rules" ]; then
+	echo "Switch rule not installed ... installing ... "
+	rule_file=$XDG_CONFIG_HOME/fusee-launcher/10-switch.rules
+	[ -d "/etc/udev/rules.d" ] sudo mkdir -p /etc/udev/rules.d
+	sudo ln -s $rule_file /etc/udev/rules.d/10-switch.rules
+	sudo udevadm control --reload
+	sudo udevadm trigger
+fi
+/home/yankas/.local/share/fusee-launcher/fusee-launcher.py /home/yankas/.config/fusee-launcher/payload/fusee-primary.bin

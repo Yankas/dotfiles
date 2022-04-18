@@ -1,0 +1,2 @@
+# /etc/udev/rules.d/10-switch.rules
+SUBSYSTEMS=="usb", ATTRS{manufacturer}=="NVIDIA Corp.", ATTRS{product}=="APX", GROUP="wheel"
