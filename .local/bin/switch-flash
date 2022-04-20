@@ -7,4 +7,4 @@ if [ ! -f "/etc/udev/rules.d/10-switch.rules" ]; then
 	sudo udevadm control --reload
 	sudo udevadm trigger
 fi
-/home/yankas/.local/share/fusee-launcher/fusee-launcher.py /home/yankas/.config/fusee-launcher/payload/fusee-primary.bin
+$XDG_DATA_HOME/fusee-launcher/fusee-launcher.py $XDG_CONFIG_HOME/fusee-launcher/payload/fusee-primary.bin

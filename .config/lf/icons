@@ -1,0 +1,131 @@
+# vimft				conf
+
+di					📁
+fi					📃
+tw					🤝
+ow					📂
+ln					⛓
+or					❌
+ex					🎯
+
+# images
+*.png				🖼
+*.webp				🖼
+*.ico				🖼
+*.gif				🖼
+*.svg				🖼
+*.tif				🖼
+*.tiff				🖼
+*.jpg				📸
+*.jpeg				📸
+*.xcf				🖌
+*.psd				🖌 # Photoshop
+*.pdn				🖌 # Paint.net
+
+# video
+*.mkv				🎥
+*.mp4				🎥
+*.webm				🎥
+*.mpeg				🎥
+*.avi				🎥
+*.mov				🎥
+*.mpg				🎥
+*.wmv				🎥
+*.m4b				🎥
+*.flv				🎥
+
+# music
+*.mp3				🎵
+*.opus				🎵
+*.ogg				🎵
+*.m4a				🎵
+*.flac				🎵
+*.wav				🎵
+
+# roms
+*.z64				🎮
+*.v64				🎮
+*.n64				🎮
+*.gba				🎮
+*.nds				🎮
+*.nes				🎮
+*.gdi				🎮
+*.nsp				🎮
+*.xci				🎮
+*.iso				📀
+*.img				📀
+
+# packages
+*.zip				📦
+*.rar				📦
+*.7z				📦
+*.tar.gz			📦
+
+# configuration files
+*.sh				⚙️
+*.zsh				⚙️
+*profile			⚙️
+*xprofile			⚙️
+*.zshrc				⚙️
+*aliasrc			⚙️
+*.xinitrc			⚙️
+*configrc			⚙️
+*.ini				⚙️
+*config				⚙️
+*dunstrc			⚙️
+*.cfg				⚙️
+*.desktop			⚙️
+*conf				⚙️
+
+# exectuables
+*.jar				♨️
+*.java				♨️
+*.exe				🪟
+
+# documents
+*.docx				✍️
+*.doc				✍️
+*.txt				✍️
+*.log				📙
+*LICENSE			✍️
+*.pdf				📕
+*.epub				📕
+*.djvu				📕
+*.xls				📊
+*.xlsx				📊
+*.csv				📊
+
+# source code
+*.ml				🐫
+*.php				🐘
+*.pl				⛔
+*.c					🇨
+*.h					🇭
+*.json				📖
+*.xml				📖
+*.plist				📖 # macOS property list
+*.yml				📖
+*.yaml				📖
+*.toml				📖
+*.o					🇴
+*.cmx				🇴 # Ocaml intermediate
+*.cmi				🇴 # Ocaml intermediate
+*.html				🌎
+*.md				🌎
+*.url				🌎
+*.fs				🇫
+*.fsx				🇫
+*.fsi				🇫 # F-Sharp interactive file.
+.js					🇯
+
+# miscellaneous 
+*.vbox				🖥️
+*.vbox-prev			🖥️
+*.vdi				🖥️
+*.torrent			🔽
+*.1					ℹ
+*.nfo				ℹ
+*.info				ℹ
+*.gpg				🔒
+*.pub				🔒
+*.pem				🔒

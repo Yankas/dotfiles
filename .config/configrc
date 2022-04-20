@@ -3,7 +3,6 @@ vim,$p/nvim/init.vim,edit
 config,$p/configrc,edit
 profile,$p/shell/profile,edit_source
 zsh,$p/zsh/.zshrc,edit_source
-zsh-local,$p/zsh/.zshrc.local,edit
 i3blocks,$p/i3blocks/config,edit
 lf,$p/lf/lfrc,edit
 lf-marks,~/.local/share/lf/marks,edit
@@ -18,9 +17,10 @@ ssh,~/.ssh/config
 fstab,/etc/fstab,sudo $EDITOR $f
 hosts,/etc/hosts,sudo $EDITOR $f
 hostname,/etc/hostname,sudo $EDITOR $f
-alias-local,$p/shell/aliasrc.local,edit
-profile-local,$p/shell/profile.local,edit
+alias-local,$p/shell/aliasrc.local,edit_source
+profile-local,$p/shell/profile.local,edit_source
+zsh-local,$p/zsh/.zshrc.local,edit
 sds,$HOME/sds2_desc,edit
 skhd,$p/skhd/skhdrc,edit
-yabai,$p/yabai/yabairc,edit
+yabai,$p/yabai/yabairc,$EDITOR $f && launchctl kickstart -k "gui/501/homebrew.mxcl.yabai
 spacebar,$p/spacebar/spacebarrc,$EDITOR $f && brew services stop spacebar && brew services start spacebar

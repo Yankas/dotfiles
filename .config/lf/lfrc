@@ -1,14 +1,14 @@
 # Luke's lf settings
 
 # Basic vars
-set shell sh
+set shell zsh
 set shellopts '-eu'
 set ifs "\n"
-set scrolloff 10
+#set scrolloff 10
 set icons
 set period 1
-set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
-set drawbox true
+#set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
+set drawbox
 
 # preview options
 set preview 1
@@ -55,9 +55,9 @@ cmd trash ${{
     file=${files%%;*}
 
     trash-put "$(basename "$file")"
-    # if there's only one element left, set `files` to an empty string.
+    # if there is only one element left, set `files` to an empty string.
     # this causes us to exit this `while` loop.
-    # else, we delete the first "element" of the string from files, and move onto the next.
+    # else, we delete the first `element`` of the string from files, and move onto the next.
     if [ "$files" = "$file" ]; then
       files=''
     else
