@@ -6,6 +6,7 @@ zsh,$p/zsh/.zshrc,edit_source
 i3blocks,$p/i3blocks/config,edit
 lf,$p/lf/lfrc,edit
 lf-marks,~/.local/share/lf/marks,edit
+lf-icons,~/.config/lf/icons,edit
 dunst,$p/dunst/dunstrc,edit
 picom,$p/picom/picom.conf,edit
 alias,$p/shell/aliasrc,edit_source
