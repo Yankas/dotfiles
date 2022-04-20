@@ -1,0 +1,17 @@
+# vim:ft=conf
+# Default GNU dir colors
+
+ln  01;36 # link
+or  31;01 # orphan
+tw  01;34 # sticky other writable
+ow  01;34 # other writeable
+st  01;34 # sticky
+di  01;34 # dir
+pi  33    # fifo
+so  01;35 # sock
+bd  33;01 # blk
+cd  33;01 # chr
+su  01;32 # setuid
+sg  01;32 # setgid
+ex  01;32 # exec
+fi  00    # file
