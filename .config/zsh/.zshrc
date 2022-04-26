@@ -10,12 +10,14 @@ ZSH_THEME="agnoster"
 plugins=(git vscode zsh-interactive-cd)
 source $ZSH/oh-my-zsh.sh
 
+compdef _bw bw
 
 setopt appendhistory autocd beep extendedglob null_glob glob_subst
 unsetopt glob_subst
 bindkey -e
 #PROMPT='%F{blue}%1~%f %# '
 
+[ -f "${XDG_CACHE_HOME}/zsh" ] || mkdir -p mkdir $XDG_CACHE_HOME/zsh
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc"
