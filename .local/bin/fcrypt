@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+if [ $1 == "-e" ]; then
+	7z a -t7z -m0=lzma2 -mx=0 -mfb=64 -md=32m -ms=on -mhe=on -p"$(bw get password fcrypt)" "$2.7z" $2
+fi
+if [ $1 == "-d" ]; then
+	7z e -p"$(bw get password fcrypt)" $2
+fi
