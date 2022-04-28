@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+[ ! -f ~/.config/calcurse/caldav/config ] && fcrypt ~/.config/calcurse/caldav/config.7z
+calcurse-caldav
+
