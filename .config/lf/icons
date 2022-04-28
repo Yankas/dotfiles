@@ -1,5 +1,4 @@
 # vim:ft=conf
-
 di					📁
 fi					📃
 tw					🤝
@@ -19,8 +18,8 @@ ex					🎯
 *.jpg				📸
 *.jpeg				📸
 *.xcf				🖌
-*.psd				🖌 # Photoshop
-*.pdn				🖌 # Paint.net
+*.psd				🖌
+*.pdn				🖌
 
 # video
 *.mkv				🎥
@@ -62,32 +61,38 @@ ex					🎯
 *.tar.gz			📦
 
 # configuration files
-*.sh				⚙️
-*.zsh				⚙️
-*profile			⚙️
-*xprofile			⚙️
-*.zshrc				⚙️
-*aliasrc			⚙️
-*.xinitrc			⚙️
-*configrc			⚙️
-*.ini				⚙️
-*config				⚙️
-*dunstrc			⚙️
-*.cfg				⚙️
-*.desktop			⚙️
-*conf				⚙️
+*.sh				⚙
+*.zsh				⚙
+*profile			⚙
+*xprofile			⚙
+*.zshrc				⚙
+*aliasrc			⚙
+*.xinitrc			⚙
+*configrc			⚙
+*.ini				⚙
+*config				⚙
+*dunstrc			⚙
+*.cfg				⚙
+*.desktop			⚙
+*.conf				⚙
+*.rc				⚙
+*passwd				⚙
+*.default			⚙
+*paths				⚙
+*bashrc				⚙
+*zshrc				⚙
 
 # exectuables
-*.jar				♨️
-*.java				♨️
+*.jar				☕
+*.java				☕
 *.exe				🪟
 
 # documents
-*.docx				✍️
-*.doc				✍️
-*.txt				✍️
+*.docx				📕
+*.doc				📕
+*.txt				📕
 *.log				📙
-*LICENSE			✍️
+*LICENSE			📕
 *.pdf				📕
 *.epub				📕
 *.djvu				📕
@@ -103,20 +108,24 @@ ex					🎯
 *.h					🇭
 *.json				📖
 *.xml				📖
-*.plist				📖 # macOS property list
+*.plist				📖
 *.yml				📖
 *.yaml				📖
 *.toml				📖
 *.o					🇴
-*.cmx				🇴 # Ocaml intermediate
-*.cmi				🇴 # Ocaml intermediate
+*.cmx				🇴
+*.cmi				🇴
 *.html				🌎
 *.md				🌎
 *.url				🌎
 *.fs				🇫
 *.fsx				🇫
-*.fsi				🇫 # F-Sharp interactive file.
-.js					🇯
+*.fsi				🇫
+*.js				🇯
+
+# git
+.gitignore			🇬
+.git				🇬
 
 # miscellaneous 
 *.vbox				🖥️
