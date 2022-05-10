@@ -40,6 +40,7 @@ alias \
 	today='date +"%m/%d/%Y"' \
 	ipe='curl ipinfo.io/ip' \
 	cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' \
+	theme='kitty +kitten themes --reload-in=all' \
 	standby='systemctl suspend'
 
 alias \
