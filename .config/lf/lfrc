@@ -124,6 +124,7 @@ map b mark-load
 map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
+map S glob-select
 
 map W $setsid -f $TERMINAL >/dev/null 2>&1
 

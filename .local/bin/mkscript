@@ -23,6 +23,7 @@ case $type in
 	tcl | tcsh) create "#!/usr/bin/env tclsh";;
 	json) create "{${nl}}";;
 	yml | yaml) create "---";;
+	tex | latex) create "";;
 	xml) create "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";;
 	html) 
 		create "<!DOCTYPE html>${nl}<html>${nl}${tab}<head>${nl}${tab}</head>\

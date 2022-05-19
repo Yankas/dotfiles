@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 if [ -f "$1" ]; then 
 	test -w "$1" && $EDITOR $1 || sudo $EDITOR $1  
 else
