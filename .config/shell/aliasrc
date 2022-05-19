@@ -28,11 +28,17 @@ alias \
 	config="source config"
 alias \
 	ka="killall" \
-	g="git" \
 	sdn="shutdown -h now" \
 	e="$EDITOR" \
 	v="$EDITOR" \
 	p="pacman" 
+
+# Git
+alias \
+	g="git" \
+	gco="git checkout" \
+	gc="git commit" \
+	clone="git clone"
 
 alias \
 	hg="history|grep" \
