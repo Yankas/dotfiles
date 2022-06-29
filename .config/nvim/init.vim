@@ -80,6 +80,9 @@ au BufNewFile,BufRead *.yml,*yaml
 	\ set shiftwidth=2
 	\ set tabstop=2
 
+" Ruby settings
+au BufNewFile,BufReadPre * let g:ruby_recommend_style = 0
+
 " ocaml support
 set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
 

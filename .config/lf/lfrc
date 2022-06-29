@@ -95,6 +95,17 @@ cmd copyto ${{
 	notify-send "📋 File(s) copied." "File(s) copies to $dest."
 }}
 
+cmd paste %{{
+    set -- $(cat ~/.local/share/lf/files)
+    mode="$1"
+    shift
+    case "$mode" in
+        copy) cp -r --backup=numbered -- "$@" .;;
+        move) mv --backup=numbered -- "$@" .;;
+    esac
+    rm ~/.local/share/lf/files
+    lf -remote "send clear"
+}}
 
 # Bindings
 map <c-f> $lf -remote "send $id select '$(fzf)'"
