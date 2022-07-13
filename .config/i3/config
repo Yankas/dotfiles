@@ -14,21 +14,25 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $ws11 "🔥1"
+set $ws12 "🔥2"
 # font for window titles only
 font pango:monospace 16 
 # wodifier for dragging windows
 floating_modifier $mod
 # pretty
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 0
 #gaps outer 10
 gaps inner 10
 gaps outer -5
+smart_gaps on
 ##################################################
 ################### Autostart ####################
 ##################################################
 exec --no-startup-id picom -b
 exec --no-startup-id redshift -l 52:13
 exec --no-startup-id dunst
+exec --no-startup-id flameshot
 
 exec --no-startup-id kitty --name popup-cale calcurse
 exec --no-startup-id kitty --name popup-term
@@ -53,6 +57,11 @@ workspace $ws4 output $screen_right
 workspace $ws6 output $screen_right
 workspace $ws8 output $screen_right
 workspace $ws10 output $screen_right
+# Games / Wine handling
+for_window [class="battle.net.exe"] border pixel 0
+for_window [class="battle.net.exe"] move to workspace $ws9
+for_window [class="d2r.exe"] border pixel 0
+
 # disable title bars 
 new_window 1pixel 
 for_window [instance="pavucontrol"] floating enable
@@ -104,7 +113,7 @@ for_window [instance="origin.exe"] floating enable
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+s exec deepin-screenshot
 #bindsym $mod+d exec --no-startup-id dmenu_run 
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+space exec --no-startup-id rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+u [instance="popup-term"] scratchpad show; [instance="popup-term"] move position center
 bindsym $mod+shift+C [instance="popup-calc"] scratchpad show; [instance="popup-calc"] move position center
