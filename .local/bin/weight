@@ -3,8 +3,9 @@ import sys, re
 from datetime import datetime
 
 
-weight_file = "/doc/body/weight"
-dob_file = "/doc/body/dob"
+weight_file = "/doc/body/weight" # file that should be used to save/read data.
+height_file = "/doc/body/height" # file containing height in cm, e.g. '193'
+dob_file = "/doc/body/dob" # file containing the date of birth in %Y-%m-%d, eg '25-03-1923'
 
 def read_all(file):
     with open(file) as f: return f.read()
@@ -26,7 +27,7 @@ def main():
     match arg:
         case "list":
             age = get_age()
-            height_in_m = float(read_all("/doc/body/height")) / 100
+            height_in_m = float(read_all(height_file)) / 100
           
             import csv
             with open(weight_file, newline='') as csvfile:

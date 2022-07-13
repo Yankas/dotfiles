@@ -1,4 +1,13 @@
 #!/usr/bin/env sh
+# USAGE: mkscript FILENAME [SCRIPT_LANGUAGE]
+# Script to create an executable script file with some of the boiler plate components
+# (e.g. shebang, headers, doctypes) included. The type of file can be provided by the
+# second argument supplied by this script. Alternatively the script tries to determine
+# the file's type by the file extension.
+#
+# EXAMPLES:
+# mkscript $HOME/.local/bin/testscript sh
+# mkscript $HOME/.local/bin/books.json
 
 file=$1
 [ -n "$2" ] && type=$2 || type="${1##*.}"
@@ -27,5 +36,7 @@ case $type in
 	xml) create "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";;
 	html) 
 		create "<!DOCTYPE html>${nl}<html>${nl}${tab}<head>${nl}${tab}</head>\
-${nl}${tab}<body>${nl}${tab}</body>${nl}${tab}</head>${nl}</html>"
+${nl}${tab}<body>${nl}${tab}</body>${nl}${tab}</head>${nl}</html>";;
+
+	*) echo "ERROR: could not determine type of script to create."
 esac

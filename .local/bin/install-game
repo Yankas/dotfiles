@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+from os import environ
+import os
+import shellutils
+
+def error(msg):
+    print(msg)
+    exit(1)
+
+def get_install_dir() -> str:
+    if environ.get('GAMES') is None:
+        error("ERROR: The enivornment variable 'GAMES' is not set.")
+    dir = environ.get('GAMES')
+    
+    if os.path.isfile(dir):
+        error("ERROR: The install path '" + dir + "' is a file (not a directory) aborting.")
+    elif not os.path.isdir(dir):
+        should_mkdir = shellutils.ask_yes_no("WARNING: The install path: '" + dir + "' does not exist. \nCreate the missing directory? (Y/n)")
+        if not should_mkdir:
+            error("ERROR: directory was not created, aborted by user.")
+        else:
+            os.makedirs(dir)
+    if not os.access(dir, os.W_OK):
+        error("ERROR: The 'GAMES' directory: '" + dir + "' is not writable for the current user.")
+    return dir
+
+def get_install_type(file):
+    if shellutils.is_archive(file):
+        return "FILE"
+    if os.path.isdir(file):
+        return "DIRECTORY"
+
+if __name__ == "__main__":
+    install_dir = get_install_dir()
+
+    print("Hello, World!")
