@@ -2,10 +2,24 @@
 from os import environ
 import os
 import shellutils
+import psutil
 
 def error(msg):
     print(msg)
     exit(1)
+
+def is_network_path(path: str) -> bool:
+
+    root_type = ""
+    for part in psutil.disk_partitions():
+        if part.mountpoint == '/':
+            root_type = part.fstype
+            continue
+
+        if path.startswith(part.mountpoint):
+            return part.fstype == "nfs"
+
+    return root_type == "nfs"
 
 def get_install_dir() -> str:
     if environ.get('GAMES') is None:
@@ -24,13 +38,22 @@ def get_install_dir() -> str:
         error("ERROR: The 'GAMES' directory: '" + dir + "' is not writable for the current user.")
     return dir
 
-def get_install_type(file):
+def get_install_mode(file):
     if shellutils.is_archive(file):
-        return "FILE"
+        return "ARCHIVE"
     if os.path.isdir(file):
         return "DIRECTORY"
+    print("bla")
 
 if __name__ == "__main__":
+    import sys
+    file = sys.argv[1]
     install_dir = get_install_dir()
+    if get_install_mode(file) == "ARCHIVE":
+        if is_network_path(file):
+            import shutil
+            file = shutil.copy(file, "/tmp/")
+        if not shellutils.extract(file, install_dir):
+            error("ERROR: Failed to extract file: '" + file + "' to '" + install_dir + "'")
 
     print("Hello, World!")

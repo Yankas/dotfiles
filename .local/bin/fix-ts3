@@ -1,2 +1,4 @@
 #!/usr/bin/env sh
+# Script to manually restart teamspeak if it happens to freeze or hang. 
+
 killall ts3client_linux_amd64 && teamspeak3

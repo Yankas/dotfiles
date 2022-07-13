@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import subprocess
 
 def ask_yes_no(question, default="yes") -> bool:
     valid = {"yes": True, "y": True, "ye": True, "no": False, "n": False}
@@ -23,8 +24,15 @@ def ask_yes_no(question, default="yes") -> bool:
 
 
 def is_archive(file) -> bool:
-    import subprocess
     command = "als " + file
+    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+    process.wait()
+    if process.returncode == 0:
+        return True
+    return False
+
+def extract(file, dest) -> bool:
+    command = "atool -X " + dest + " " + file
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
     process.wait()
     if process.returncode == 0:

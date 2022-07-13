@@ -1,4 +1,6 @@
 #!/bin/bash
+# Script to show IOMMU mappings useful for setting up VFIO/PCI-Passthrough in virtual machines.
+
 shopt -s nullglob
 for g in `find /sys/kernel/iommu_groups/* -maxdepth 0 -type d | sort -V`; do
     echo "IOMMU Group ${g##*/}:"

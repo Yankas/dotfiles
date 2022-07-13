@@ -1,4 +1,7 @@
 #!/bin/sh
+# Script to automatically run editor with sudo if the 
+# file cannot be written to by the current user.
+
 if [ -f "$1" ]; then 
 	test -w "$1" && $EDITOR $1 || sudo $EDITOR $1  
 else
